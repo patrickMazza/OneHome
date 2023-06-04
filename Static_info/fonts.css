@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Agrandir';
+  src: url('Agrandir-TextBold.woff2') format('woff2'),
+    url('Agrandir-TextBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
