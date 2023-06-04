@@ -1,0 +1,1 @@
+web: gunicorn onehome.wsgi --log-file -
