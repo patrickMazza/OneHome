@@ -1,0 +1,11 @@
+{% extends "hello/base.html" %} {% block content %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<h2>You have been logged out</h2>
+<div class="border-top pt-3">
+  <small class="text-muted">
+    <a href="{% url 'login' %}">Log in again</a>
+  </small>
+</div>
+{% endblock content %}

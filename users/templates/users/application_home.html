@@ -1,0 +1,67 @@
+{% extends "hello/base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<a class="nav-item nav-link" href="{% url 'client_page' slug=slug1 %}">Client Page</a>
+<div class="content-section">
+  {% for entry in client_entry %}
+  <div class="media">
+    <img src="/media/{{entry.image}}" class="rounded-circle account-img" />
+    <div class="media-body">
+      <h2 class="account-heading">{{ entry.first_Name }}</h2>
+      <p class="text-secondary">{{ entry.client_Intake_Date}}</p>
+
+    </div>
+    {% for app in formlist %}
+
+    <a class="nav-item nav-link"
+      href="{% url 'application_home' slug1=entry.slug slug2=app.slug%}">{{app.application_Name}}</a>
+    {% endfor %}
+    {% endfor %}
+  </div>
+  <b>{{app.application_Name}}</b>
+  <ul>
+    {% for part in part1 %}
+    <li>
+      {% if part.done == True %}&#10004;{% else %}&times;{% endif %}
+      <a
+        href="{% url 'app_part' slug1=slug1 slug2=slug2 app_name=part.application_Name id=part.id%}">{{part.application_Name}}</a>
+    </li>
+    {% endfor%}
+    {% for part in part2 %}
+    <li>
+      {% if part.done == True %}&#10004;{% else %}&times;{% endif %}
+      {{part.application_Name}}
+    </li>
+    {% endfor%}
+    {% for part in part3 %}
+    <li>
+      {% if part.done == True %}&#10004;{% else %}&times;{% endif %}
+      {{part.application_Name}}
+    </li>
+    {% endfor%}
+    {% for part in part4 %}
+    <li>
+      {% if part.done == True %}&#10004;{% else %}&times;{% endif %}
+      {{part.application_Name}} </li>
+    {% endfor%}
+    {% for part in part5 %}
+    <li>
+      {% if part.done == True %}&#10004;{% else %}&times;{% endif %}
+      {{part.application_Name}} </li>
+    {% endfor%}
+    {% for part in part6 %}
+    <li>
+      {% if part.done == True %}&#10004;{% else %}&times;{% endif %}
+      {{part.application_Name}} </li>
+    {% endfor%}
+    {% for part in part7 %}
+    <li>
+      {% if part.done == True %}&#10004;{% else %}&times;{% endif %}
+      {{part.application_Name}} </li>
+    {% endfor%}
+  </ul>
+
+
+</div>
+{% endblock content %}

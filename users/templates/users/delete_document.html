@@ -1,0 +1,21 @@
+{% extends "hello/base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<a class="nav-item nav-link" href="{% url 'client_page' slug=slug %}">Client Page</a>
+<div class="content-section">
+  <form method='post' action="{% url 'delete_document' slug=slug %}">
+    {% csrf_token %}
+    <select class="form-control" id="document_Name" name='selected_doc'>
+      {% for doc in documents %}
+      <option value='{{doc.id}}'>{{doc.document_Name}}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" value="Delete">
+  </form>
+  <div class="border-top pt-3">
+    <a class="ml-2" href="{% url 'upload_document' slug=slug %}">Upload Document</a>
+  </div>
+
+
+  {% endblock content %}

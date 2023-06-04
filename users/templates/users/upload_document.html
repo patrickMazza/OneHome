@@ -1,0 +1,34 @@
+{% extends "hello/base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<a class="nav-item nav-link" href="{% url 'client_page' slug=slug %}">Client Page</a>
+<div class="content-section">
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">Document Upload</legend>
+      {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="submit">Upload</button>
+    </div>
+  </form>
+  <div class="border-top pt-3">
+    <a class="ml-2" href="{% url 'delete_document' slug=slug %}">Delete Documents</a>
+  </div>
+  <div class="container row pt-4">
+
+    {% for entry in documents %}
+    <div class='col-12 col-md-3 col-lg-3'>
+      <a href="/{{entry.file_field}}" download>
+        <p class="text-center"><strong>{{entry.document_Name}}</strong></p>
+        <p class="text-center"><strong>{{entry.application}}</strong></p>
+      </a>
+    </div>
+    {% empty %}
+    <p>No Documents have been added yet.</p>
+    {% endfor %}
+  </div>
+
+  {% endblock content %}

@@ -1,0 +1,23 @@
+{% extends "hello/base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<a class="nav-item nav-link" href="{% url 'client_page' slug=slug1 %}">Client Page</a>
+<div class="content-section">
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">{{app.application_Name}}</legend>
+      {% for field in form %}
+      {% bootstrap_field field form_group_class='col-md-6 form-group label-floating' %}
+      {% endfor %}
+
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="submit">Save</button>
+    </div>
+  </form>
+
+
+
+  {% endblock content %}
