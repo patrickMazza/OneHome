@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Overview</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body class="has-background-light has-text-centered p-0" style="display:none;">
+
+    <!--load navigation bar component-->
+    <div id="nav-placeholder">
+    </div>
+    <script>
+        $(function(){
+        $("#nav-placeholder").load("./components/navbar.html");
+        });
+    </script>
+    <!--end of navigation bar-->
+
+    <div class="_spacer"></div>
+
+    <section class="hero is-fullheight">
+
+        <div class="hero-body has-text-left" style="height:100px; padding-top: 80px;">
+            <!-- New Profile button -->
+            <button class="form-button" aria-haspopup="true" aria-controls="dropdown-menu">
+                NEW PROFILE
+            </button>
+
+            <!-- Filter dropdown menu -->
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <button class="form-button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    FILTER
+                    <!-- <span class="icon is-small"> -->
+                      <!-- <i class="fas fa-angle-down" aria-hidden="true"></i> -->
+                    <!-- </span> -->
+                  </button>
+                </div>
+                
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <!-- <div class="dropdown-content"> -->
+                    <a class="dropdown-item">
+                        Item 1
+                    </a>
+                    <a class="dropdown-item">
+                        Item 2
+                    </a>
+                    <a class="dropdown-item">
+                        Item 3
+                    </a>
+                    <a class="dropdown-item">
+                        Item 4
+                    </a>
+                  <!-- </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Array of profile icons -->
+        <div class="hero-body array-row">     
+            <div class="level has-text-centered">
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="./pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Charlotte B.</p>
+                    <p class="subtitle is-7">05/10/1988</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Lily C.</p>
+                    <p class="subtitle is-7">10/23/1983</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Grace K.</p>
+                    <p class="subtitle is-7">07/07/1992</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Tyler K.</p>
+                    <p class="subtitle is-7">03/18/1977</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-body">     
+            <div class="level has-text-centered">
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Samuel R.</p>
+                    <p class="subtitle is-7">12/03/1981</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Jack R.</p>
+                    <p class="subtitle is-7">09/12/1995</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Emma T.</p>
+                    <p class="subtitle is-7">01/28/1986</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Andrew W.</p>
+                    <p class="subtitle is-7">11/08/1979</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- uncomment this section for generic template -->
+        <!-- Array of profile icons
+        <div class="hero-body array-row">     
+            <div class="level has-text-centered">
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="./pages/profile.html"><img src="./assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Name Lastname</p>
+                    <p class="subtitle is-7">MM/DD/YYYY</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Name Lastname</p>
+                    <p class="subtitle is-7">MM/DD/YYYY</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Name Lastname</p>
+                    <p class="subtitle is-7">MM/DD/YYYY</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Name Lastname</p>
+                    <p class="subtitle is-7">MM/DD/YYYY</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-body">     
+            <div class="level has-text-centered">
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Name Lastname</p>
+                    <p class="subtitle is-7">MM/DD/YYYY</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Name Lastname</p>
+                    <p class="subtitle is-7">MM/DD/YYYY</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Name Lastname</p>
+                    <p class="subtitle is-7">MM/DD/YYYY</p>
+                </div>
+                
+                <div class="column pl-6 pr-6">
+                    <figure class="image is-256x256">
+                        <a href="pages/profile.html"><img src="assets/personIcon.png"></a>
+                    </figure>
+                    <p class="title is-5 pt-5">Name Lastname</p>
+                    <p class="subtitle is-7">MM/DD/YYYY</p>
+                </div>
+            </div>
+        </div> -->
+
+
+    </section>
+
+<script>
+    // add slight delay to reduce flickering
+    $(document).ready(function () {
+    $("body").removeClass("none").hide().fadeIn(75);
+    });
+</script>
+
+</body>
+
+</html>

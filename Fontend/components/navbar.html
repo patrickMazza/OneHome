@@ -1,0 +1,91 @@
+<!-- 
+    BOILERPLATE:
+    <div>
+        <div id="nav-placeholder">
+        </div>
+        <script>
+            $(function(){
+            $("#nav-placeholder").load("../components/navbar.html");
+            });
+        </script> 
+    </div>
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <section>
+
+        <!-- Navbar -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            
+            <!-- always visible -->
+            <div class="navbar-brand">
+                <!-- main logo, click to redirect to index.html page -->
+                <a class="navbar-item navbar-logo" href="./index.html">
+                    <img src="./assets/logoBlue.png">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <!-- this part is hidden on touch devices -->
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <!-- <a class="navbar-item my-navbar-item">
+                        Filler
+                    </a>
+
+                    <a class="navbar-item my-navbar-item">
+                        Filler
+                    </a> -->
+
+                    <div class="navbar-item has-dropdown is-hoverable my-navbar-item">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item my-navbar-item">
+                                About
+                            </a>
+                            <a class="navbar-item my-navbar-item">
+                                Contact
+                            </a>
+                            <a class="navbar-item my-navbar-item">
+                                Report an Issue
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item my-navbar-item" href="./pages/login.html">
+                                Sign Out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div>
+                            <a class="icon navbar-icon">
+                                <img src="./assets/profileIcon.png" style="height:200px;">
+                            </a>
+                            <a class="icon navbar-icon">
+                                <img src="./assets/settingsIcon.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+</body>
+</html>

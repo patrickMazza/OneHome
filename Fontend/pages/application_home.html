@@ -1,0 +1,229 @@
+<!-- {% extends "hello/base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %} -->
+<!-- <a class="nav-item nav-link" href="{% url 'client_page' slug=slug1 %}">Client Page</a>
+<div class="content-section">
+<form method="POST" enctype="multipart/form-data"> -->
+    <!-- {% csrf_token %} -->
+    <!-- <fieldset class="form-group">
+    <legend class="border-bottom mb-4">application_Name</legend> -->
+    <!-- {% for field in form %}
+    {% bootstrap_field field form_group_class='col-md-6 form-group label-floating' %}
+    {% endfor %} -->
+
+    <!-- </fieldset>
+    <div class="form-group">
+    <button class="btn btn-outline-info" type="submit">Save</button>
+    </div>
+</form> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Application</title>
+    <link rel="stylesheet" href="../application_home_style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body class="has-background-light has-text-centered" style="display:none;">
+    <div class="wrapper">
+
+        <!-- left-side space for vertical navbar -->
+        <div>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+                $(function(){
+                $("#nav-placeholder").load("../components/sidebar.html");
+                });
+            </script>
+        </div>
+
+        <div class="main-wrapper">
+
+            <div class="hero">
+                <div class="hero-body header">
+
+                    <!-- dropdown menu -->
+                    <div class="navbar-menu" style="flex-grow: 0;">
+                        <div class="navbar-start">
+                            <div class="navbar-item has-dropdown is-hoverable">
+
+                                <a class="nav-burger">
+                                    <img src="../assets/navBurger.png">
+                                </a>
+
+                                <div class="navbar-dropdown">
+                                    <a class="navbar-item" href="#sec1">Personal Information</a>
+                                    <a class="navbar-item" href="#sec2">Psychological Evaluation</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-title">
+                        2010e Supportive Housing Application
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- SECTION 1 -->
+
+            <div class="section-divider" id="sec1">
+                PERSONAL INFORMATION
+            </div>
+
+            <div class="section-content">
+                <!-- copied template code -->
+                <!-- <form class="" style="">
+                    <label for="fname">First name:</label>
+                    <br>
+                    <input type="text" id="fname" name="fname">
+                    <br>
+                    <label for="lname">Last name:</label>
+                    <br>
+                    <input type="text" id="lname" name="lname">
+                    <input type="submit" value="Submit">
+                </form> -->
+                
+                <form>
+                    <!-- first row -->
+                    <div class="columns">
+                        <div class="column is-two-fifths">
+                            <div class="input-field">
+                                <label>First Name</label>
+                                <input type="text" value="Charlotte">
+                            </div>
+                        </div>
+                        
+                        <div class="column is-one-fifth">
+                            <div class="input-field">
+                                <label>Middle</label>
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="column is-two-fifths">
+                            <div class="input-field">
+                                <label>Last Name</label>
+                                <input type="text" value = B.>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second row -->
+                    <div class="columns">
+                        <div class="column is-one-third">
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="text" value="05/10/1988">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- third row -->
+                    <div class="columns">
+                        <div class="column">
+                            <div class="input-field">
+                                <label>Fill 5</label>
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="input-field">
+                                <label>Fill 6</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- fourth row -->
+                    <div class="columns">
+                        <div class="column">
+                            <div class="input-field">
+                                <label>Fill 7</label>
+                                <textarea rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SECTION 2 -->
+
+            <div class="section-divider" id="sec2">
+                PSYCHOLOGICAL EVALUATION
+            </div>
+
+            <div class="section-content">
+                <form>
+                    <!-- first row -->
+                    <div class="columns">
+                        <div class="column">
+                            <div class="input-field">
+                                <label>Fill 1</label>
+                                <textarea rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second row -->
+                    <div class="columns">
+                        <div class="column">
+                            <div class="input-field">
+                                <label>Fill 2</label>
+                                <textarea rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="_spacer">
+                <!-- empty div to allow the form to scroll all the way down -->
+            </div>
+        </div>
+        
+        <!-- BOTTOM BAR -->
+
+        <div class="bottombar">
+            <div class="bottombar-left">
+                <button class="form-button">
+                    MAP TO APPLICATION
+                </button>
+                <button class="form-button">
+                    MAP TO PDF
+                </button>
+            </div>
+
+            <div class="bottombar-right">
+                <div>
+                    <p>Charlotte B.</p>
+                    <p>0123456</p>
+                </div>
+                <img class="profile-button" src="../assets/personIcon.png">
+            </div>
+            
+        </div>
+
+    </div>
+    
+    <script>
+        // add slight delay to reduce flickering
+        $(document).ready(function () {
+        $("body").removeClass("none").hide().fadeIn(75);
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+  <!-- {% endblock content %} -->
