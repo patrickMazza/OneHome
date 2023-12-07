@@ -6,3 +6,4 @@ Onehome company software
 - All frontend code
 - All backend code
 - VC Slide decks 
+- Buissness Plan
